@@ -20,23 +20,28 @@
 		body {
 			height: 100%;
 			width: 100%;
+			font-family: "Inconsolata";
+			color: #FFFFFF;
 			background-color: #3F51B5;
 			position: absolute;
 			padding: 0;
 			margin: 0;
 		}
 
+		a { color: #FFFFFF; }
+
 		h1,
 		h2 {
-			font-family: "Inconsolata";
 			font-weight: 400;
-			position: relative;
-			top: 50%;
 			padding: 0;
 			margin: 0;
+		}
+
+		div.container {
+			position: relative;
+			top: 40%;
+			
 			text-align: center;
-			font-size: 4em;
-			color: #FFFFFF;
 		}
 
 		@media (min-width: 540px) {
@@ -46,7 +51,7 @@
 			h2 {
 				font-size: 3em;
 			}
-			h3 {
+			a.lg{
 				font-size: 1em;
 			}
 		}
@@ -58,8 +63,8 @@
 			h2 {
 				font-size: 4em;
 			}
-			h3 {
-				font-size: 2em;
+			a.lg{
+				font-size: 1.5em;
 			}
 		}
 
@@ -70,8 +75,8 @@
 			h2 {
 				font-size: 5em;
 			}
-			h3 {
-				font-size: 2.5em;
+			a.lg{
+				font-size: 2em;
 			}
 		}
 	</style>
@@ -79,10 +84,12 @@
 
 <body>
 
-	<h1>David West</h1>
-	<h2>Web Developer</h2>
-	<h3><a href="mailto:hello@davidwest.co">hello{at}davidwest.co</a></h3>
-
+	<div class="container">
+		<h1>David West</h1>
+		<h2>Web Developer</h2>
+		<a class="lg" href="mailto:hello@davidwest.co">hello{at}davidwest.co</a>
+	</div>
+	
 </body>
 
 </html>
