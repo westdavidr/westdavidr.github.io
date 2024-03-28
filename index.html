@@ -6,7 +6,6 @@
 <title>David West - Web Developer</title>
 <meta name="description" content="David West, a professional Web Developer. Contact me for cutting-edge web development projects.">
 <meta name="keywords" content="David West, Web Developer, Contact, Portfolio, Web Development">
-<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Recommended to add a favicon -->
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X60ZXY34TW"></script>
@@ -29,6 +28,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
   }
 
   .container {
@@ -47,6 +47,17 @@
   a:hover {
     text-decoration: underline;
   }
+
+  .glow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #64FFDA; /* Cool blue background */
+    box-shadow: 0 0 10px #64FFDA, 0 0 20px #64FFDA, 0 0 40px #64FFDA; /* Glowing effect */
+    pointer-events: none; /* Allows clicking through the glow */
+    transition: transform 0.5s ease; /* Smooth transition for moving glow */
+  }
 </style>
 </head>
 <body>
@@ -61,6 +72,14 @@
       <p>X: <a href="https://x.com/westdavidr" target="_blank" rel="noopener noreferrer">westdavidr</a></p>
     </section>
   </main>
+  <div class="glow"></div>
 </div>
+
+<script>
+  document.addEventListener('mousemove', function(e) {
+    const glow = document.querySelector('.glow');
+    glow.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+  });
+</script>
 </body>
 </html>
