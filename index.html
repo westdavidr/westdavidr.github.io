@@ -50,13 +50,15 @@
 
   .glow {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px; /* Increased size */
+    height: 30px; /* Increased size */
     border-radius: 50%;
-    background-color: #64FFDA; /* Cool blue background */
-    box-shadow: 0 0 10px #64FFDA, 0 0 20px #64FFDA, 0 0 40px #64FFDA; /* Glowing effect */
+    background-color: transparent;
+    box-shadow: 0 0 15px 10px #64FFDA, /* Increased blur */
+                 0 0 30px 20px #64FFDA, /* Increased blur */
+                 0 0 45px 30px #64FFDA; /* Increased blur and spread for a softer glow */
     pointer-events: none; /* Allows clicking through the glow */
-    transition: transform 0.5s ease; /* Smooth transition for moving glow */
+    transition: transform 0.1s ease; /* Faster transition for more immediate following */
   }
 </style>
 </head>
@@ -78,7 +80,9 @@
 <script>
   document.addEventListener('mousemove', function(e) {
     const glow = document.querySelector('.glow');
-    glow.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+    // Update the glow position to be directly under the mouse cursor
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
   });
 </script>
 </body>
