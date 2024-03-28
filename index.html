@@ -47,16 +47,15 @@
   a:hover {
     text-decoration: underline;
   }
-
   .glow {
     position: absolute;
-    width: 1px; /* Minimized to effectively remove the solid center */
-    height: 1px; /* Minimized to effectively remove the solid center */
+    width: 1px; /* Minimized size */
+    height: 1px; /* Minimized size */
     border-radius: 50%;
     background-color: transparent;
-    box-shadow: 0 0 15px 30px #64FFDA, /* Soft, spread-out glow */
-                 0 0 30px 60px #64FFDA, /* Soft, spread-out glow */
-                 0 0 45px 90px #64FFDA; /* Soft, spread-out glow */
+    box-shadow: 0 0 5px 10px rgba(100, 255, 218, 0.2), /* Very soft, spread-out glow */
+                 0 0 10px 20px rgba(100, 255, 218, 0.1), /* Very soft, spread-out glow */
+                 0 0 15px 30px rgba(100, 255, 218, 0.05); /* Extremely subtle glow */
     pointer-events: none; /* Allows clicking through the glow */
   }
 </style>
